@@ -1,0 +1,118 @@
+:root {
+    --color-blue: #090979;
+    --color-blue-two: #00d4ff;
+    --color-black: #020024;
+    --color-white: #fff;
+    --gradient-backgroud: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    --gap: 1rem;
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right: 1px solid #fff;
+    }
+
+    to {
+        border-right: transparent;
+    }
+}
+
+@keyframes typing {
+    to {
+        width: 15.6rem;
+    }
+
+    from {
+        width: 0;
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+.title-contain h1 {
+    font-size: 7rem;
+
+}
+
+.title-contain p {
+    font-size: 2.6rem;
+    margin-left: 1.4rem;
+    animation: blinkCursor 1s normal infinite steps(40), typing 2s steps(40);
+    white-space: nowrap;
+    width: 15.6rem;
+    overflow: hidden;
+}
+
+.title-contain h1,
+.title-contain p {
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.img-contain img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+}
+
+.logos {
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos a img {
+    max-width: 3rem;
+}
+
+.nav-bar {
+    border-top: 1px solid var(--color-white);
+    padding: var(--gap);
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: var(--gap);
+}
+
+
+@media(max-width:540px) {
+    .title-contain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-contain h1 {
+        font-size: 4rem;
+    }
+
+    .title-contain p {
+        font-size: 1.4rem;
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap);
+    }
+
+}
